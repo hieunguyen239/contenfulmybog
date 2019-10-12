@@ -9,7 +9,13 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.6",
+    "@react-spring/addons": "^9.0.0-beta.33",
     "bootstrap": "^4.3.1",
+    "d3-ease": "^1.0.5",
     "dotenv": "^8.0.0",
     "gatsby": "^2.13.28",
     "gatsby-image": "^2.2.24",
@@ -17,7 +23,10 @@
     "gatsby-source-contentful": "^2.1.14",
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
+    "react-circular-progressbar": "^2.0.2",
     "react-dom": "^16.10.2",
+    "react-move": "^6.0.0",
+    "react-spring": "^8.0.27",
     "reactstrap": "^8.0.1"
   },
   "devDependencies": {

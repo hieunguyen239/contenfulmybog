@@ -1,5 +1,46 @@
 .sidebar {
-    .avatar {
-        max-width: 200px;
+    min-height: 100vh;
+    background-color: #42b883;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    .username {
+        text-transform: uppercase;
+        font-weight: 700;
     }
+    .avatar {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        margin: 10px 0;
+        img {
+            filter: grayscale(100%);
+        }
+    }
+    .social-connect {
+        .contact-info {
+            text-align: left;
+            border-top: 1px solid #43ab92;
+            padding: 20px 0;
+            margin-top: 20px;
+            .contact {
+                padding: 3px 0;
+                .svg-inline--fa  {
+                    margin-right: 5px;
+                }
+            }
+        }
+        &.other {
+            border-top: 1px solid #43ab92;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+            a {
+                font-size: 32px;
+                padding: 0 5px;
+            }
+        }
+    }
+    
 }

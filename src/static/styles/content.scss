@@ -1,0 +1,29 @@
+.para-content {
+    padding: 0 15px;
+    .content {
+        background: rgba(0, 0, 0, .5);
+        padding: 20px;
+        color: #ffffff;
+        width: 100%;
+
+        &.technical {
+            .details {
+                .skill-lists {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        min-width: 200px;
+                        list-style-type: none;
+                        margin: 10px 15px;
+
+                        .progress {
+                            border-radius: 0;
+                            height: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

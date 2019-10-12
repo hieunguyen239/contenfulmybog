@@ -1,3 +1,23 @@
-.container {
-  //display: flex;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=vietnamese');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.container-fluid {
+  .col-lg-3,
+  .col-lg-9 {
+    padding: 0;
+  }
 }
