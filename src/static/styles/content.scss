@@ -1,8 +1,8 @@
 .para-content {
-    padding: 0 15px;
+    // padding: 0 15px;
     .content {
-        background: rgba(0, 0, 0, .5);
-        padding: 20px;
+        background: rgba(0, 0, 0, .7);
+        padding: 100px 20px;
         color: #ffffff;
         width: 100%;
 
@@ -24,6 +24,16 @@
                     }
                 }
             }
+        }
+        .timeline-headline,
+        .timeline-detail {
+            color: #ffffff;
+        }
+        .timeline-headline {
+            margin-bottom: 16px;
+        }
+        .timeline--animate {
+            color: #ddd !important;
         }
     }
 }

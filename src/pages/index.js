@@ -13,7 +13,7 @@ const RootIndex = (props) => {
             <Sidebar person={props.data.contentfulPerson}/>
           </Col>
           <Col lg="9">
-            <Content person={props.data.contentfulPerson}/>
+            <Content person={props.data.contentfulPerson} companies={props.data.allContentfulCompanies.edges}/>
           </Col>
         </Row>
       </Container>
@@ -35,7 +35,7 @@ query HomeQuery {
     github
     company
     avatar {
-      fixed(resizingBehavior: PAD, width: 200, height: 200) {
+      fixed(resizingBehavior: PAD, width: 150, height: 150) {
         base64
         width
         height
@@ -80,6 +80,18 @@ query HomeQuery {
     amp
     git
     scss
+  }
+  allContentfulCompanies {
+    edges {
+      node {
+        endDate
+        startDate
+        companyName
+        jobDetails {
+          jobDetails
+        }
+      }
+    }
   }
 }
 `
