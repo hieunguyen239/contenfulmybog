@@ -9,8 +9,8 @@ const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homep
 
 class Content extends Component {
     render() {
-        const { person, companies } = this.props;
-        console.log(companies);
+        const { person, companies, skills } = this.props;
+
         return (
             <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3304&q=80)', backgroundSize: 'cover' }} className="para-content">
                 {/* <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
@@ -92,29 +92,9 @@ class Content extends Component {
                     <h1 className="title">Technical Skills:</h1>
                     <div className="details">
                         <ul className="skill-lists">
-                            <li><label htmlFor="javascript">Javascript:</label> <Progress color="success" value={person.javascript * 10} /></li>
-                            <li><label htmlFor="es6">ES6:</label> <Progress color="success" value={person.es6 * 10} /></li>
-                            <li><label htmlFor="jquery">Jquery:</label> <Progress color="success" value={person.jquery * 10} /></li>
-                            <li><label htmlFor="scss">SCSS:</label> <Progress color="success" value={person.scss * 10} /></li>
-                            <li><label htmlFor="react">React:</label> <Progress color="success" value={person.react * 10} /></li>
-                            <li><label htmlFor="grunt">Grunt:</label> <Progress color="success" value={person.grunt * 10} /></li>
-                            <li><label htmlFor="gulp">Gulp:</label> <Progress color="success" value={person.gulp * 10} /></li>
-                            <li><label htmlFor="webpack">Webpack:</label> <Progress color="success" value={person.webpack * 10} /></li>
-                            <li><label htmlFor="magento">Magento:</label> <Progress color="success" value={person.magento * 10} /></li>
-                            <li><label htmlFor="wordpress">Wordpress:</label> <Progress color="success" value={person.wordpress * 10} /></li>
-                            <li><label htmlFor="sfcc">SFCC (sale forces):</label> <Progress color="success" value={person.sfcc * 10} /></li>
-                            <li><label htmlFor="bigcommerce">Big Commerce:</label> <Progress color="success" value={person.bigCommerce * 10} /></li>
-                            <li><label htmlFor="amp">AMP:</label> <Progress color="success" value={person.amp * 10} /></li>
-                            <li><label htmlFor="mysql">MySQL:</label> <Progress color="success" value={person.mySql * 10} /></li>
-                            <li><label htmlFor="git">Git:</label> <Progress color="success" value={person.git * 10} /></li>
-                            <li><label htmlFor="gtm">Google Tag Manager:</label> <Progress color="success" value={person.googleTagManager * 10} /></li>
-                            <li><label htmlFor="fb">Facebook Remaketing:</label> <Progress color="success" value={person.facebookRemakerting * 10} /></li>
-                            <li><label htmlFor="emailcoding">Email Coding:</label> <Progress color="success" value={person.emailCoding * 10} /></li>
-                            <li><label htmlFor="psd">Photoshop:</label> <Progress color="success" value={person.photoshop * 10} /></li>
-                            <li><label htmlFor="sketch">Sketch/Figma/InvisionApp:</label> <Progress color="success" value={person.sketchfigmainvisionApp * 10} /></li>
-                            <li><label htmlFor="windows">Windows:</label> <Progress color="success" value={person.windows * 10} /></li>
-                            <li><label htmlFor="ubuntu">Ubuntu:</label> <Progress color="success" value={person.ubuntu * 10} /></li>
-                            <li><label htmlFor="macos">MacOS:</label> <Progress color="success" value={person.macOs * 10} /></li>
+                            {
+                                skills.map(ele => <li><label htmlFor="skill">{ele.node.name}:</label> <Progress color="success" value={ele.node.rate * 10} /></li>)
+                            }
                         </ul>
                     </div>
                 </section>

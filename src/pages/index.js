@@ -13,7 +13,7 @@ const RootIndex = (props) => {
             <Sidebar person={props.data.contentfulPerson}/>
           </Col>
           <Col lg="9">
-            <Content person={props.data.contentfulPerson} companies={props.data.allContentfulCompanies.edges}/>
+            <Content person={props.data.contentfulPerson} companies={props.data.allContentfulCompanies.edges} skills={props.data.allContentfulSkills.edges} />
           </Col>
         </Row>
       </Container>
@@ -90,6 +90,14 @@ query HomeQuery {
         jobDetails {
           jobDetails
         }
+      }
+    }
+  }
+  allContentfulSkills {
+    edges {
+      node {
+        name
+        rate
       }
     }
   }
