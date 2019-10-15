@@ -55,31 +55,7 @@ query HomeQuery {
       address
     }
     gender
-    wordpress
-    windows
-    webpack
-    ubuntu
-    sketchfigmainvisionApp
-    react
-    php
-    photoshop
-    javascript
-    jquery
-    macOs
-    magento
-    grunt
-    gulp
-    googleTagManager
-    git
-    facebookRemakerting
-    emailCoding
-    es6
-    sfcc
-    bigCommerce
-    mySql
-    amp
-    git
-    scss
+
   }
   allContentfulCompanies {
     edges {
