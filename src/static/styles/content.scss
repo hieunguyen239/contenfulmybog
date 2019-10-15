@@ -1,11 +1,13 @@
 .para-content {
     // padding: 0 15px;
+
     .content {
-        background: rgba(0, 0, 0, .7);
+        position: relative;
         padding: 100px 20px;
         color: #ffffff;
         width: 100%;
-
+        position: relative;
+        z-index: 1;
         &.technical {
             .details {
                 .skill-lists {
@@ -27,13 +29,26 @@
         }
         .timeline-headline,
         .timeline-detail {
-            color: #ffffff;
+            color: #272121;
+        }
+        .timeline-detail {
+            background-color: rgba($color: #ffffff, $alpha: 0.8);
+            padding: 10px 20px;
         }
         .timeline-headline {
             margin-bottom: 16px;
+            background-color: rgba($color: #ffffff, $alpha: .8);
+            padding: 5px 10px;
+            display: inline-block;
         }
         .timeline--animate {
-            color: #ddd !important;
+            color: #f5f0e3 !important;
+            .title {
+                color: #01d28e;
+                &:before {
+                    background-color: #01d28e !important;
+                }
+            }
         }
     }
 }

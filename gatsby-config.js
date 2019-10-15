@@ -2,10 +2,11 @@ require(`dotenv`).config({path: `.env`,})
 
 module.exports = {
   siteMetadata: {
-    name: `Star Wars Movies 🎥`,
-    tagline: `"Do, or do not. There is no try."`,
+    name: `My CV`,
+    tagline: `"Contentful with Gatsby"`,
     githubLink: `https://github.com/hieunguyen239/contenfulmybog`,
   },
+  pathPrefix: "/resume",
   plugins: [
     `gatsby-plugin-sass`,
     {

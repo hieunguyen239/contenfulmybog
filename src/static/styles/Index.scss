@@ -3,6 +3,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  height: 100%;
 }
 
 a {
@@ -12,10 +13,13 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
-.title {
+h1.title {
   text-align: center;
   font-weight: 700;
   margin-bottom: 20px;
+  background-color: rgba($color: #ffffff, $alpha: .8);
+  padding: 5px 10px;
+  color: #272121;
 }
 .container-fluid {
   .col-lg-3,

@@ -3,7 +3,7 @@ import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 import { Progress } from 'reactstrap';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import '../static/styles/content.scss';
-
+import mainBG from '../static/images/coding.gif';
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 
@@ -12,15 +12,15 @@ class Content extends Component {
         const { person, companies, skills } = this.props;
 
         return (
-            <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3304&q=80)', backgroundSize: 'cover' }} className="para-content">
+            <Parallax scrolling={true} ref={ref => (this.parallax = ref)} pages={4} style={{ background: ` linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(${ mainBG }) center center` }} className="para-content">
                 {/* <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
                 <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} /> */}
 
                 <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }} />
 
-                <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
+                {/* <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
                     <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
-                </ParallaxLayer>
+                </ParallaxLayer> */}
 
                 <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
                     <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
@@ -63,10 +63,11 @@ class Content extends Component {
                 />
 
                 <ParallaxLayer
+                    className="pala-wrapper"
                     offset={0}
                     speed={0.1}
                     onClick={() => this.parallax.scrollTo(1)}
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
                     {/* <img src={url('server')} style={{ width: '20%' }} /> */}
                     <section className="content">
                     <h1 className="title">Education and qualification:</h1>
@@ -83,7 +84,8 @@ class Content extends Component {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    offset={1}
+                    className="pala-wrapper"
+                    offset={0.8}
                     speed={0.1}
                     onClick={() => this.parallax.scrollTo(2)}
                     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -101,12 +103,14 @@ class Content extends Component {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    offset={2.5}
+                    className="pala-wrapper"
+                    offset={2}
                     speed={-0}
                     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}
                     onClick={() => this.parallax.scrollTo(0)}>
                     {/* <img src={url('clients-main')} style={{ width: '40%' }} /> */}
                         <section className="content experiences">
+                            <h1 className="title">Working Experiences:</h1>
                             <Timeline>
                                 {
                                     companies.map((item, index) => {
