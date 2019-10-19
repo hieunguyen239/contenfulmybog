@@ -5,15 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMapMarkerAlt, faPhone, faEnvelopeOpen, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-
-const sidebar = (props) => {
-    const {person} = props;
+import {useSpring, animated} from 'react-spring'
+export default function Sidebar(props) {
+    const { person } = props;
     library.add(fab, faMapMarkerAlt, faPhone, faEnvelopeOpen, faCalendarAlt);
+    const a = useSpring({opacity: 1, from: {opacity: 0}})
     return (
-        <aside className="sidebar">
+        <animated.aside style={a} className="sidebar">
              <section className="username">
                 {person.name}
             </section>
+        
             <section className="avatar">
                 <Img alt="" fixed={person.avatar.fixed} className="rounded-circle" />
             </section>
@@ -33,7 +35,6 @@ const sidebar = (props) => {
                 <div className="contact telegram"><a href={`telegram:${person.skype}`} title="Telegram"> <FontAwesomeIcon icon={['fab', 'telegram']} /></a></div>
                 <div className="contact github"><a href={`telegram:${person.skype}`} title="Github"> <FontAwesomeIcon icon={['fab', 'github']} /></a></div>
             </section>
-        </aside>
+        </animated.aside>
       )
 }
-export default sidebar;

@@ -8,14 +8,12 @@ import '../static/styles/index.scss';
 const RootIndex = (props) => {
     return (
       <div className="custom-container">
-        
           <div className="col-left">
             <Sidebar person={props.data.contentfulPerson}/>
           </div>
           <div  className="col-right">
             <Content person={props.data.contentfulPerson} companies={props.data.allContentfulCompanies.edges} skills={props.data.allContentfulSkills.edges} />
           </div>
-       
       </div>
     )
 };
