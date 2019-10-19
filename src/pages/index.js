@@ -3,20 +3,20 @@ import Sidebar from '../components/sidebar';
 import Content from '../components/content';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../static/styles/index.scss';
-import {Container, Row, Col} from 'reactstrap';
+
 
 const RootIndex = (props) => {
     return (
-      <Container fluid={true}>
-        <Row>
-          <Col lg="3">
+      <div className="custom-container">
+        
+          <div className="col-left">
             <Sidebar person={props.data.contentfulPerson}/>
-          </Col>
-          <Col lg="9">
+          </div>
+          <div  className="col-right">
             <Content person={props.data.contentfulPerson} companies={props.data.allContentfulCompanies.edges} skills={props.data.allContentfulSkills.edges} />
-          </Col>
-        </Row>
-      </Container>
+          </div>
+       
+      </div>
     )
 };
 
@@ -35,7 +35,7 @@ query HomeQuery {
     github
     company
     avatar {
-      fixed(resizingBehavior: PAD, width: 150, height: 150) {
+      fixed(resizingBehavior: PAD, width: 120, height: 120) {
         base64
         width
         height
