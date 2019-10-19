@@ -7,7 +7,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy:github": "npm run build && node ./deploy-github"
+    "deploy:github": "gatsby build --prefix-paths && node ./deploy-github"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
